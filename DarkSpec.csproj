@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="**\*.glade" />
+    <EmbeddedResource Include="**\*.glade">
+      <LogicalName>%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fftsharp" Version="1.0.8" />
+    <PackageReference Include="GtkSharp" Version="3.22.25.*" />
+    <PackageReference Include="opentk.netstandard" Version="1.0.5.32" />
+    <PackageReference Include="System.Drawing.common" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
